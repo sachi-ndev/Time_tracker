@@ -120,7 +120,7 @@ const Timer = () => {
    
 
       <div>
-        <p className="bg-slate-300 font-PT_Sans_Narrow  text-[10vw] md:text-[6vw]">
+        <p className="bg-slate-300 font-PT_Sans_Narrow  text-[14vw] md:text-[6vw]">
           {formatTime(time)}
         </p>
         <button
