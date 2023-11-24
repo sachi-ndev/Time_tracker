@@ -18,7 +18,6 @@ const Timer = () => {
   const [isRunning, setIsRunning] = useState(false);
   const[btndisable,setbtnDisable]=useState(true)
 
-  const[inputValue,setinputValue]=useState()
 
   useEffect(() => {
     let timer;
@@ -89,7 +88,6 @@ const Timer = () => {
   const submitHandler=(e)=>{
 
       e.preventDefault();
-      // setinputValue(e.target.value)
       setFormData([
           ...formData,
           {
@@ -99,8 +97,6 @@ const Timer = () => {
       ])
  
     setTime(0);
-    setinputValue('')
-
     // console.log(e.target);
     setModal(false)
 
@@ -120,7 +116,7 @@ const Timer = () => {
    
 
       <div>
-        <p className="bg-slate-300 font-PT_Sans_Narrow  text-[14vw] md:text-[6vw]">
+        <p className="bg-slate-300 font-PT_Sans_Narrow  text-[15vw] md:text-[6vw]">
           {formatTime(time)}
         </p>
         <button
@@ -176,7 +172,7 @@ const Timer = () => {
                   <input
                     type="text"
                     name="Title"
-                    value={inputValue}
+                    
                     onChange={(e)=>setT(e)}
                     placeholder="Title"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -194,8 +190,6 @@ const Timer = () => {
                 <textarea
                   rows="3"
                   name="Description"
-                  value={inputValue}
-
                   onChange={(e)=>setC(e)}
                   id="Description"
                   placeholder="Type Description"
